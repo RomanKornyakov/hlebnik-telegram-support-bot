@@ -29,6 +29,10 @@ async def answer_to_question(message: Message):  # ответ на вопрос 
         except TypeError:
             db.add_user_question_to_bot(message.chat.id, f'@{message.chat.username}', message.text)
             await message.answer('Я не могу ответить на этот вопрос. Позвать оператора?', reply_markup=inlinebuttons_need_operator)
+            await bot.send_message(operators_chat, f'Я не могу ответить на этот вопрос:\n'
+                                                   f'{message.text}\n'
+                                                   f'Пользователь: @{message.chat.username}\n'
+                                                   f'Используйте команду /add_data, чтобы дополнить базу данных с вопросами и ответами.')
 
 
 @router.callback_query(F.data == 'need_operator')
