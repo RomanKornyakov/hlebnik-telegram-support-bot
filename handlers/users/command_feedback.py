@@ -21,7 +21,7 @@ async def command_feedback(message: Message, state: FSMContext):
                 f'Вы уже писали отзыв. Вот ваш прошлый отзыв:\n{db.get_feedback(message.chat.id)}\n\nХотите изменить его?',
                 reply_markup=inlinebuttons_change_feedback)
         except TypeError:
-            await message.answer('Напишите свой отзыв о работе бота.', reply_markup=inlinebutton_cancel)
+            await message.answer('Напишите свой отзыв о пекарне.', reply_markup=inlinebutton_cancel)
             await state.set_state(Feedback.feedback)
             await state.update_data(type_feedback='new')
 

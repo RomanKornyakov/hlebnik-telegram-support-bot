@@ -88,3 +88,14 @@ inlinebutton_list_cancel = [
     ]
 ]
 inlinebutton_cancel = InlineKeyboardMarkup(inline_keyboard=inlinebutton_list_cancel)
+
+# inline кнопка для изменения условий подписки
+inlinebutton_list_change_subscription = [
+    [
+        InlineKeyboardButton(text='Продлить подписку на месяц', callback_data='prolong_subscription_month')
+    ],
+    [
+        InlineKeyboardButton(text='Продлить подписку на год', callback_data='prolong_subscription_year')
+    ]
+]
+inlinebutton_change_subscription = InlineKeyboardMarkup(inline_keyboard=inlinebutton_list_change_subscription)

@@ -5,10 +5,17 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 # начальные кнопки
 main_buttons_list = [
     [
-        KeyboardButton(text='Мобильное приложение'),
+        KeyboardButton(text='Заказ'),
+        KeyboardButton(text='Мобильное приложение')
+    ],
+    [
         KeyboardButton(text='Ассортимент'),
         KeyboardButton(text='Доставка'),
-        KeyboardButton(text='Адреса'),
+        KeyboardButton(text='Адреса')
+    ],
+    [
+        KeyboardButton(text='Подписка'),
+        KeyboardButton(text='Купоны'),
         KeyboardButton(text='Работа у нас')
     ]
 ]
@@ -58,7 +65,9 @@ buttons_mobile_app_loyalty_system = ReplyKeyboardMarkup(keyboard=buttons_mobile_
 buttons_assortment_list = [
     [
         KeyboardButton(text='Новинки'),
-        KeyboardButton(text='Популярное'),
+        KeyboardButton(text='Популярное')
+    ],
+    [
         KeyboardButton(text='Быстроприготовимое'),
         KeyboardButton(text='Меню'),
         KeyboardButton(text='Мерч')
@@ -105,17 +114,9 @@ buttons_quick_to_prepare = ReplyKeyboardMarkup(keyboard=buttons_quick_to_prepare
 # кнопки ассортимент → меню
 buttons_menu_list = [
     [
-        KeyboardButton(text='Горячие напитки'),
-        KeyboardButton(text='Холодные напитки'),
-        KeyboardButton(text='Сэндвичи'),
-        KeyboardButton(text='Слойки'),
         KeyboardButton(text='Пироги'),
-        KeyboardButton(text='Выпечка'),
-        KeyboardButton(text='Пирожные'),
-        KeyboardButton(text='Торты'),
         KeyboardButton(text='Хлеб'),
         KeyboardButton(text='Печенье'),
-        KeyboardButton(text='Азия'),
         KeyboardButton(text='Кулинария')
     ],
     [
@@ -123,6 +124,50 @@ buttons_menu_list = [
     ]
 ]
 buttons_menu = ReplyKeyboardMarkup(keyboard=buttons_menu_list, resize_keyboard=True)
+
+# кнопки ассортимент → меню → кулинария
+buttons_cookery_list = [
+    [
+        KeyboardButton(text='Онигири с цыпленком терияки')
+    ],
+    [
+        KeyboardButton(text='Главное меню')
+    ]
+]
+buttons_cookery = ReplyKeyboardMarkup(keyboard=buttons_cookery_list, resize_keyboard=True)
+
+# кнопки ассортимент → меню → хлеб
+buttons_bread_list = [
+    [
+        KeyboardButton(text='Багет французский')
+    ],
+    [
+        KeyboardButton(text='Главное меню')
+    ]
+]
+buttons_bread = ReplyKeyboardMarkup(keyboard=buttons_bread_list, resize_keyboard=True)
+
+# кнопки ассортимент → меню → печенье
+buttons_cookies_list = [
+    [
+        KeyboardButton(text='Орешки с вареной сгущенкой')
+    ],
+    [
+        KeyboardButton(text='Главное меню')
+    ]
+]
+buttons_cookies = ReplyKeyboardMarkup(keyboard=buttons_cookies_list, resize_keyboard=True)
+
+# кнопки ассортимент → меню → пироги
+buttons_pies_list = [
+    [
+        KeyboardButton(text='Пирог с яблоком и брусникой')
+    ],
+    [
+        KeyboardButton(text='Главное меню')
+    ]
+]
+buttons_pies = ReplyKeyboardMarkup(keyboard=buttons_pies_list, resize_keyboard=True)
 
 # доставка кнопки
 buttons_delivery_list = [
@@ -140,7 +185,7 @@ buttons_delivery = ReplyKeyboardMarkup(keyboard=buttons_delivery_list, resize_ke
 # адреса кнопки
 buttons_addresses_list = [
     [
-        KeyboardButton(text='Самая близкая пекарня к Вам', request_location=True),
+        KeyboardButton(text='Ближайшая пекарня к Вам', request_location=True),
         KeyboardButton(text='Список пекарен')
     ],
     [
@@ -159,6 +204,19 @@ buttons_list_bakeries_list = [
     ]
 ]
 buttons_list_bakeries = ReplyKeyboardMarkup(keyboard=buttons_list_bakeries_list, resize_keyboard=True)
+
+# подписка кнопки
+buttons_subscription_list = [
+    [
+        KeyboardButton(text='Возможности подписки'),
+        KeyboardButton(text='Моя подписка'),
+        KeyboardButton(text='Оформить подписку')
+    ],
+    [
+        KeyboardButton(text='Главное меню')
+    ]
+]
+buttons_subscription = ReplyKeyboardMarkup(keyboard=buttons_subscription_list, resize_keyboard=True)
 
 # работа у нас кнопки
 buttons_work_list = [

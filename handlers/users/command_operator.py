@@ -72,7 +72,8 @@ async def inlinebutton_cancel(callback: CallbackQuery, state: FSMContext):
     second_id = data.get('second_id')
 
     await bot.send_message(operators_chat, f'@{callback.message.chat.username} закончил(а) звонок.')
-    await bot.send_message(second_id, f'@{callback.message.chat.username} закончил(а) звонок.')
+    if second_id is not None:
+        await bot.send_message(second_id, f'@{callback.message.chat.username} закончил(а) звонок.')
 
     await callback.message.edit_text('Общение завершено!')
     await state.clear()

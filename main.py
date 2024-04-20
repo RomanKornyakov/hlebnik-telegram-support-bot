@@ -27,7 +27,7 @@ async def main():
     # создание меню команд
     await bot.set_my_commands([BotCommand(command='help', description='Как работает бот?'),
                                BotCommand(command='operator', description='Вызов оператора'),
-                               BotCommand(command='feedback', description='Написать отзыв')])
+                               BotCommand(command='feedback', description='Написать отзыв о пекарне')])
 
     await bot.send_message(operators_chat, 'Бот начал работу!')
     for operator in list(operators.keys()):
